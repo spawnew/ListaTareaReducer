@@ -1,21 +1,28 @@
-const tarea=[] 
+
+import { Types } from './Type'  
+
+
+export const initialState = {    tareas: []} 
 
 
 
 
 
 
-function ReducerTareas(state, action) {
+export function ReducerTareas(state, action) {
 
     switch (action.type) {
-        case "añadirTarea":
+        case Types.añadirTarea:
 
-            return [...state, action.payload];
-     
+            return {
+                ...state,
+                tareas: [...state.tareas, action.payload]
+            
+            }
 
 
 
-        case Default:
+         default:
             return state;
     }
 }
