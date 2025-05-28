@@ -14,7 +14,9 @@ function App() {
 
 
    } 
-    
+ const eliminarTarea = (id) => {
+    dispatch({ type: Types.eliminarTarea, payload: id })
+  }   
     
     
     
@@ -27,9 +29,10 @@ function App() {
       {state.tareas.map((tarea, index) => (
         <div key={index} className='tarea'>
           <h3>{tarea.tarea}</h3>
-         
+          <button onClick={() => eliminarTarea(tarea.id)}>Eliminar Tarea</button>
         </div>
       ))}
+     
     </>
   )
 }

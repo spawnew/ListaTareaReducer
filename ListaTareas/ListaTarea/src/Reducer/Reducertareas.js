@@ -19,7 +19,15 @@ export function ReducerTareas(state, action) {
                 tareas: [...state.tareas, action.payload]
             
             }
+        case Types.eliminarTarea:
+           
+                return {
+                    ...state,
+                    tareas:  state.tareas.filter((item) => ( item.id !== action.payload )),
 
+                }
+            
+        
 
 
          default:
