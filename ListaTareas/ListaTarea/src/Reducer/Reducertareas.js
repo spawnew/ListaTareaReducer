@@ -21,13 +21,30 @@ export function ReducerTareas(state, action) {
             }
         case Types.eliminarTarea:
            
-                return {
-                    ...state,
-                    tareas:  state.tareas.filter((item) => ( item.id !== action.payload )),
+            return {
+                ...state,
+                tareas: state.tareas.filter((item) => (item.id !== action.payload)),
 
-                }
+            }
             
-        
+        case Types.editarTarea:
+            
+            
+            return {
+                ...state,
+                tareas: state.tareas.map((tarea) => (tarea.id === action.payload.id ?
+                    {...tarea, tarea: action.payload.tarea} : tarea)),
+
+
+            }
+        case Types.completarTarea:
+            
+            
+            return {
+                ...state,
+                completar:
+
+        }
 
 
          default:

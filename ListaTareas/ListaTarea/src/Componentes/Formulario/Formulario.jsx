@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 const Formulario = ({ obtenerTareas }) => {
-
+ 
     const [form, setForm] = useState({ tarea: "",id: null })
     const handleChange = (e) => {
         setForm({
@@ -14,7 +14,7 @@ const Formulario = ({ obtenerTareas }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(form)
+     
         obtenerTareas(form)
         setForm({ tarea: "" }) // Limpiar el campo de entrada después de enviar
     }
