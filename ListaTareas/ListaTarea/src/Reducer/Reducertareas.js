@@ -41,8 +41,7 @@ export function ReducerTareas(state, action) {
             
             
             return {
-                ...state,
-                completar:
+                
 
         }
 

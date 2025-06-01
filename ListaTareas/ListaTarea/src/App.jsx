@@ -1,7 +1,8 @@
 import { useReducer,useState  } from 'react'
 import Formulario from './Componentes/Formulario/Formulario'
 import { Types } from './Reducer/Type'
-import {ReducerTareas,initialState}from './Reducer/Reducertareas'
+import { ReducerTareas, initialState } from './Reducer/Reducertareas'
+import Tarea from './Componentes/Tarea'
 import './App.css'
 
 function App() {
@@ -32,17 +33,23 @@ function App() {
 }
     
   return (
-    <>
+    <><div>
+
+    </div>
+      <h1 className=''>Lista de tareas </h1>
       <Formulario
        obtenerTareas={obtenerTareas} >
       </Formulario>
       
       {state.tareas.map((tarea, index) => (
         <div key={index} className='tarea'>
-          <h3 className={tarea.completada}>{tarea.tarea}</h3>
-          <button onClick={() => eliminarTarea(tarea.id)}>Eliminar Tarea</button>
-          <button onClick={() => setEditar(tarea)}>EDITAT Tarea</button>
-         <button onClick={() => completarTarea(tarea)}>completar Tarea</button>
+          <Tarea
+            tarea={tarea}
+            eliminarTarea={eliminarTarea}
+            setEditar={setEditar}
+            completarTarea={completarTarea}
+          />
+          
         </div>
       ))}
      
