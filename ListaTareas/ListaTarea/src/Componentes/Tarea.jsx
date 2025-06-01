@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tarea = ({tarea,eliminarTarea,setEditar,completarTarea}) => {
   return (
-      <div className='flex flex-row w-100 justify-between border-2 p-2 m-2 bg-blue-200 rounded-lg shadow-lg'>
+      <div className='flex flex-row w-100 justify-between border-2 p-2 m-2 bg-gradient-to-r from-blue-200 to-blue-500  rounded-lg shadow-lg'>
          
           {tarea.completada && <span className='text-green-500'>✔️</span>}
           <p className='text-bold text-1 p-2'>{tarea.tarea}</p>
