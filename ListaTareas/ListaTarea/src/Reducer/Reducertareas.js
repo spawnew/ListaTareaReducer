@@ -41,6 +41,9 @@ export function ReducerTareas(state, action) {
             
             
             return {
+                ...state,
+                tareas: state.tareas.map((tarea) => (tarea.id === action.payload.id ?
+                    {...tarea, completada: !tarea.completada} : tarea)),
                 
 
         }
