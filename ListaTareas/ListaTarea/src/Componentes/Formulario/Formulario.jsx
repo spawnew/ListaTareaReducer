@@ -14,6 +14,10 @@ const Formulario = ({ obtenerTareas }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
+        if(form.tarea===""){
+            alert("Ingrese una tarea")
+            return
+        }
      
         obtenerTareas(form)
         setForm({ tarea: "" }) // Limpiar el campo de entrada después de enviar
