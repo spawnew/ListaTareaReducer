@@ -31,17 +31,18 @@ function App() {
   const completarTarea = (tarea) => {
   dispatch({type:Types.completarTarea,payload:tarea})
 }
-    
+   
   return (
-    <><div>
+    <>
+      <div className='flex flex-col  w-150 items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-500'>
 
-    </div>
-      <h1 className=''>Lista de tareas </h1>
+   
+      <h1 className='text-amber-100 text-xl font-bold'>Lista de tareas  </h1>
       <Formulario
        obtenerTareas={obtenerTareas} >
       </Formulario>
       
-      {state.tareas.map((tarea, index) => (
+      {state.tareas.slice(0,8).map((tarea, index) => (
         <div key={index} className='tarea'>
           <Tarea
             tarea={tarea}
@@ -52,7 +53,7 @@ function App() {
           
         </div>
       ))}
-     
+     </div>
     </>
   )
 }

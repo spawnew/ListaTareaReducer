@@ -22,12 +22,12 @@ const Formulario = ({ obtenerTareas }) => {
         <div>
 
 
-            <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleChange} name="tarea" value={form.tarea} placeholder='ingrese una tarea' >
+            <form className='w-100' onSubmit={handleSubmit}>
+                <input className='border-2 bg-blue-200 m-1 p-1  '  type="text" onChange={handleChange} name="tarea" value={form.tarea} placeholder='Ingrese una tarea' >
                 </input>
               
 
-                <input type="submit" ></input>
+                <input className='border-2  bg-emerald-600 text-amber-50 m-1 p-1 rounded-xl hover:bg-blue-200 hover:text-blue-950'  type="submit" ></input>
 
             </form>
 
