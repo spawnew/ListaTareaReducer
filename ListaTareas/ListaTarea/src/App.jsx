@@ -7,14 +7,14 @@ import { useLocalStorage } from './Componentes/hook/useLocalStorage';
 import './App.css';
 
 function App() {
-  // 1️⃣ Inicializamos tareas desde localStorage
+ 
   const [tareasGuardadas, setTareasGuardadas] = useLocalStorage('tareas', []);
   const initialState = { tareas: tareasGuardadas };
 
   const [state, dispatch] = useReducer(ReducerTareas, initialState);
   const [editar, setEditar] = useState(null);
 
-  // 2️⃣ Guardamos en localStorage cada vez que cambian las tareas
+  
   useEffect(() => {
     setTareasGuardadas(state.tareas);
   }, [state.tareas]);
