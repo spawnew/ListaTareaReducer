@@ -2,7 +2,7 @@
 import { Types } from './Type'  
 
 
-export const initialState = {    tareas: []} 
+export const initialState = { tareas: []} 
 
 
 
