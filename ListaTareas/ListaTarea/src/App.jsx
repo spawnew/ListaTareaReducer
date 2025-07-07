@@ -17,7 +17,7 @@ function App() {
   
   useEffect(() => {
     setTareasGuardadas(state.tareas);
-  }, [state.tareas]);
+  },  [state.tareas, setTareasGuardadas]);
 
   const obtenerTareas = (form) => {
     if (editar) {
